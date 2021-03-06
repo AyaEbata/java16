@@ -33,9 +33,5 @@ https://openjdk.java.net/jeps/369
 - GitHubに移行されたよ！！
 - ここだよ！！ https://github.com/openjdk/jdk
 
-### JEP 386: Alpine Linux Port
-https://openjdk.java.net/jeps/386
-
-
 ## ちゃんと上記でJava 16が入ったことを確認したけどIntelliJで怒られた！！
 まだリリースしてないので、設定してもIntelliJ自体が対応してないみたい…？
