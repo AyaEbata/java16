@@ -34,4 +34,9 @@ https://openjdk.java.net/jeps/369
 - ここだよ！！ https://github.com/openjdk/jdk
 
 ## ちゃんと上記でJava 16が入ったことを確認したけどIntelliJで怒られた！！
-まだリリースしてないので、設定してもIntelliJ自体が対応してないみたい…？
+https://www.jetbrains.com/ja-jp/idea/nextversion/#section=mac  
+現状だと、ここ↑からEarly AccessのIntelliJを持ってくると、Project StructureのProject language levelでJava 16が出るようになり、
+Java 16の文法で書いてもエラーにならないようになる！！
+
+ちゃんと変換してくれるようになった！！
+![records](img/records.png)
