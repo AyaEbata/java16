@@ -33,6 +33,12 @@ https://openjdk.java.net/jeps/369
 - GitHubに移行されたよ！！
 - ここだよ！！ https://github.com/openjdk/jdk
 
+### JDK-8180352: Add Stream.toList() method
+https://bugs.openjdk.java.net/browse/JDK-8180352
+
+- 簡単にstreamでlistが作れるようになった！
+- これで作ったlistはlist.add()などで変更を加えることができない
+
 ## ちゃんと上記でJava 16が入ったことを確認したけどIntelliJで怒られた！！
 https://www.jetbrains.com/ja-jp/idea/nextversion/#section=mac  
 現状だと、ここ↑からEarly AccessのIntelliJを持ってくると、Project StructureのProject language levelでJava 16が出るようになり、

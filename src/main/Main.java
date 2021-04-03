@@ -42,6 +42,7 @@ public class Main {
         }
     }
 
+    // JDK-8180352: Add Stream.toList() method
     private static void streamToList() {
         // Java 16より前の書き方
         List<Integer> list1 = Stream.of(1, 2).map(n -> n + 1).collect(Collectors.toUnmodifiableList());
