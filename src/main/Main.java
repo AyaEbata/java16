@@ -56,11 +56,13 @@ public class Main {
 
     // JDK-8248166: Add new flatMap stream operation that is more amenable to pushing
     private static void streamMapMulti() {
+        // Java 16より前の書き方
         List<Integer> list1 = Stream.of(1, 2, 3)
                 .flatMap(i -> Stream.of(i, i + 1))
                 .toList();
         System.out.println(list1);
 
+        // Java 16以降の書き方
         List<Integer> list2 = Stream.of(1, 2, 3)
                 .<Integer>mapMulti((i, sink) -> {
                     sink.accept(i);
