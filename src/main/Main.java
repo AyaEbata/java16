@@ -1,12 +1,16 @@
 package main;
 
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
     public static void main(String[] args) {
         records();
         patternMatching();
+        streamToList();
     }
 
     // JEP 395: Records
@@ -36,6 +40,16 @@ public class Main {
         if (obj2 instanceof String s) {
             System.out.println(s);
         }
+    }
+
+    private static void streamToList() {
+        // Java 16より前の書き方
+        List<Integer> list1 = Stream.of(1, 2).map(n -> n + 1).collect(Collectors.toUnmodifiableList());
+        System.out.println(list1);
+
+        // Java 16以降の書き方
+        List<Integer> list2 = Stream.of(1, 2).map(n -> n + 1).toList();
+        System.out.println(list2);
     }
 }
 

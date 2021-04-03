@@ -38,5 +38,5 @@ https://www.jetbrains.com/ja-jp/idea/nextversion/#section=mac
 現状だと、ここ↑からEarly AccessのIntelliJを持ってくると、Project StructureのProject language levelでJava 16が出るようになり、
 Java 16の文法で書いてもエラーにならないようになる！！
 
-ちゃんと変換してくれるようになった！！
-![records](img/records.png)
+ちゃんと変換してくれるようになった！！めちゃよい！
+![toList](img/toList.png)
