@@ -62,7 +62,7 @@ public class Main {
                 .toList();
         System.out.println(list1);
 
-        // Java 16以降の書き方
+        // Java 16以降で追加された書き方（flatMapとはちょっと使い方違うけど比較）
         List<Integer> list2 = Stream.of(1, 2, 3)
                 .<Integer>mapMulti((i, sink) -> {
                     sink.accept(i);
