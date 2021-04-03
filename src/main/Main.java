@@ -11,6 +11,7 @@ public class Main {
         records();
         patternMatching();
         streamToList();
+        streamMapMulti();
     }
 
     // JEP 395: Records
@@ -50,6 +51,22 @@ public class Main {
 
         // Java 16以降の書き方
         List<Integer> list2 = Stream.of(1, 2).map(n -> n + 1).toList();
+        System.out.println(list2);
+    }
+
+    // JDK-8248166: Add new flatMap stream operation that is more amenable to pushing
+    private static void streamMapMulti() {
+        List<Integer> list1 = Stream.of(1, 2, 3)
+                .flatMap(i -> Stream.of(i, i + 1))
+                .toList();
+        System.out.println(list1);
+
+        List<Integer> list2 = Stream.of(1, 2, 3)
+                .<Integer>mapMulti((i, sink) -> {
+                    sink.accept(i);
+                    sink.accept(i + 1);
+                })
+                .toList();
         System.out.println(list2);
     }
 }
